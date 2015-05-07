@@ -2,10 +2,20 @@
 
 angular.module('gymbudApp')
   .controller('NavbarCtrl', function ($scope, $location, Auth) {
-    $scope.menu = [{
-      'title': 'Home',
-      'link': '/'
-    }];
+    $scope.menu = [
+      {
+        'title': 'Home',
+        'link': '/'
+      },
+      {
+        'title': 'Articles',
+        'link': '/articles'
+      },
+      {
+        'title': 'Activities',
+        'link': '/activity'
+      }
+    ];
 
     $scope.isCollapsed = true;
     $scope.isLoggedIn = Auth.isLoggedIn;

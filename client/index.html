@@ -21,8 +21,10 @@
     <link rel="stylesheet" href="app/app.css">
       <!-- injector:css -->
       <link rel="stylesheet" href="app/account/login/login.css">
+      <link rel="stylesheet" href="app/activity/activity.css">
       <link rel="stylesheet" href="app/admin/admin.css">
       <link rel="stylesheet" href="app/app.css">
+      <link rel="stylesheet" href="app/article/article.css">
       <link rel="stylesheet" href="app/main/main.css">
       <link rel="stylesheet" href="components/modal/modal.css">
       <!-- endinjector -->
@@ -34,6 +36,7 @@
     <![endif]-->
 
     <!-- Add your site or application content here -->
+    <div ng-include="'components/navbar/navbar.html'"></div>
     <div ui-view=""></div>
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
@@ -73,8 +76,12 @@
           <script src="app/account/login/login.controller.js"></script>
           <script src="app/account/settings/settings.controller.js"></script>
           <script src="app/account/signup/signup.controller.js"></script>
+          <script src="app/activity/activity.controller.js"></script>
+          <script src="app/activity/activity.js"></script>
           <script src="app/admin/admin.controller.js"></script>
           <script src="app/admin/admin.js"></script>
+          <script src="app/article/article.controller.js"></script>
+          <script src="app/article/article.js"></script>
           <script src="app/main/main.controller.js"></script>
           <script src="app/main/main.js"></script>
           <script src="components/auth/auth.service.js"></script>
