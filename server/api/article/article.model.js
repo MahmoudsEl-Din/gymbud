@@ -26,19 +26,19 @@ var ArticleSchema = new Schema({
   dateModified: Date,
   _author: {
     type: Schema.Types.ObjectId,
-    ref:'user',
+    ref:'User',
     required: true
   },
   starred: [
     {
       type:Schema.Types.ObjectId,
-      ref:'user'
+      ref:'User'
     }
   ],
   read: [
     {
       type:Schema.Types.ObjectId,
-      ref:'user'
+      ref:'User'
     }
   ]
 });

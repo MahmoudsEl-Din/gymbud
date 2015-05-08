@@ -27,13 +27,21 @@ var ActivitySchema = new Schema({
   attending:[
     {
       type:Schema.Types.ObjectId,
-      ref:'user'
+      ref:'User'
     }
   ],
   _author: {
     type:Schema.Types.ObjectId,
-    ref:'user',
+    ref:'User',
     required: true
+  },
+  location: {
+    latitude: Number,
+    longitude: Number
+  },
+  time: {
+    type: Date,
+    required:true
   }
 });
 
