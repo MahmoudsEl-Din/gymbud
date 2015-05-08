@@ -8,7 +8,13 @@ var ActivitySchema = new Schema({
     type: String,
     required:true
   },
-  story: {
+  labels: [
+    {
+      type: String,
+      required: true
+    }
+  ],
+  description: {
     type: String,
     required:true
   },
@@ -18,9 +24,16 @@ var ActivitySchema = new Schema({
     default: Date.now
   },
   dateModified: Date,
+  attending:[
+    {
+      type:Schema.Types.ObjectId,
+      ref:'user'
+    }
+  ],
   _author: {
     type:Schema.Types.ObjectId,
-    ref:'user'
+    ref:'user',
+    required: true
   }
 });
 
